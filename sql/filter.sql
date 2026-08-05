@@ -9,7 +9,8 @@ SELECT
 	op."Best3SquatKg",
 	op."Best3BenchKg",
 	op."Best3DeadliftKg",
-	op."TotalKg"
+	op."TotalKg",
+	op."Place"
 FROM raw.openpowerlifting_20260801 op
 WHERE op."Age" >= 18
 AND op."Event"  = 'SBD'
