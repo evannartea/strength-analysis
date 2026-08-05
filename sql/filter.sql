@@ -1,20 +1,20 @@
 CREATE TABLE staging.openpowerlifting_20260801 AS
 SELECT
-	op."Name",
-	op."Sex",
-	op."Age",
-	op."BodyweightKg",
-	op."Country",
-	op."Date"::date AS "Date",
-	op."Best3SquatKg",
-	op."Best3BenchKg",
-	op."Best3DeadliftKg",
-	op."TotalKg",
-	op."Place"
-FROM raw.openpowerlifting_20260801 op
-WHERE op."Age" >= 18
-AND op."Sex" <> 'Mx'
-AND op."Event"  = 'SBD'
-AND op."Equipment" = 'Raw'
-AND op."Place" NOT IN ('DQ', 'DD', 'NS')
-ORDER BY op."Date" DESC
+	"Name",
+	"Sex",
+	"Age",
+	"BodyweightKg",
+	"Country",
+	"Date"::date AS "Date",
+	"Best3SquatKg",
+	"Best3BenchKg",
+	"Best3DeadliftKg",
+	"TotalKg",
+	"Place"
+FROM raw.openpowerlifting_20260801
+WHERE "Age" >= 18
+AND "Sex" <> 'Mx'
+AND "Event"  = 'SBD'
+AND "Equipment" = 'Raw'
+AND "Place" NOT IN ('DQ', 'DD', 'NS')
+ORDER BY "Date" DESC
