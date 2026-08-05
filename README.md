@@ -18,8 +18,8 @@ Male Lifters
 ```text
 |       |      Age |   BodyweightKg |   SquatKg |   BenchKg |   DeadliftKg |   TotalKg |
 |-------|----------|----------------|-----------|-----------|--------------|-----------|
-| count | 552232   |       551942   |  552002   |  551969   |     551983   |  552232   |
-| mean  |     29.7 |           91.2 |     201.3 |     134.3 |        230.4 |     566   |
+| count | 548203   |       547916   |  547974   |  547943   |     547955   |  548203   |
+| mean  |     29.7 |           91.2 |     201.3 |     134.4 |        230.4 |     566   |
 | std   |     11.4 |           19.3 |      47.4 |      31.4 |         44.5 |     115.3 |
 | min   |     18   |           25   |      15   |      12.5 |         20   |      60   |
 | 25%   |     21.5 |           79   |     170   |     112.5 |        200   |     490   |
@@ -32,11 +32,11 @@ Female Lifters
 ```text
 |       |      Age |   BodyweightKg |   SquatKg |   BenchKg |   DeadliftKg |   TotalKg |
 |-------|----------|----------------|-----------|-----------|--------------|-----------|
-| count | 286226   |       286054   |  286172   |  286167   |     286174   |  286226   |
+| count | 284323   |       284152   |  284269   |  284265   |     284271   |  284323   |
 | mean  |     31.8 |           70.7 |     116.4 |      65.4 |        139.5 |     321.2 |
-| std   |     11.5 |           17.2 |      30.9 |      17.6 |         29.4 |      73.4 |
+| std   |     11.5 |           17.2 |      30.9 |      17.6 |         29.4 |      73.3 |
 | min   |     18   |           34.9 |      10   |       6.8 |         20   |      52.5 |
-| 25%   |     22.5 |           59   |      95   |      52.5 |        120   |     270   |
+| 25%   |     23   |           59   |      95   |      52.5 |        120   |     270   |
 | 50%   |     28.5 |           67.2 |     115   |      62.5 |        140   |     317.5 |
 | 75%   |     38.5 |           78.7 |     135   |      75   |        157.5 |     367.5 |
 | max   |     92   |          216   |     318.5 |     188.2 |        297.5 |     759   |
@@ -47,13 +47,13 @@ Female Lifters
 
 ### 📝 Notes
 #
-- The raw data was filtered to include only male or female adults, full SBD events, and raw equipment, while excluding any disqualified entries or no-shows:
+- The raw data was filtered to include only male or female adults, full SBD events, and raw equipment, while excluding any disqualified entries, no-shows, or guest lifters:
 ```sql
 WHERE "Age" >= 18
 AND "Sex" <> 'Mx'
 AND "Event"  = 'SBD'
 AND "Equipment" = 'Raw'
-AND "Place" NOT IN ('DQ', 'DD', 'NS')
+AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 ```
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables:
 ```text
@@ -62,12 +62,12 @@ AND "Place" NOT IN ('DQ', 'DD', 'NS')
 | Name         |            0 |
 | Sex          |            0 |
 | Age          |            0 |
-| BodyweightKg |          462 |
-| Country      |        12551 |
+| BodyweightKg |          458 |
+| Country      |        12403 |
 | Date         |            0 |
-| SquatKg      |          284 |
-| BenchKg      |          322 |
-| DeadliftKg   |          301 |
+| SquatKg      |          283 |
+| BenchKg      |          318 |
+| DeadliftKg   |          300 |
 | TotalKg      |            0 |
 | Place        |            0 |
 ```
