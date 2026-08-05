@@ -13,6 +13,7 @@ SELECT
 	op."Place"
 FROM raw.openpowerlifting_20260801 op
 WHERE op."Age" >= 18
+AND op."Sex" <> 'Mx'
 AND op."Event"  = 'SBD'
 AND op."Equipment" = 'Raw'
 AND op."Place" NOT IN ('DQ', 'DD', 'NS')
