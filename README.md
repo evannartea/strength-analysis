@@ -26,19 +26,19 @@ AND "Place" NOT IN ('DQ', 'DD', 'NS')
 ```
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables.
 ```text
-Column             Count
-------------------------
-Name                   0
-Sex                    0
-Age                    0
-BodyweightKg         462
-Country            12551
-Date                   0
-Best3SquatKg         284
-Best3BenchKg         322
-Best3DeadliftKg      301
-TotalKg                0
-Place                  0
+| Column          |   Null Count |
+|-----------------|--------------|
+| Name            |            0 |
+| Sex             |            0 |
+| Age             |            0 |
+| BodyweightKg    |          462 |
+| Country         |        12551 |
+| Date            |            0 |
+| Best3SquatKg    |          284 |
+| Best3BenchKg    |          322 |
+| Best3DeadliftKg |          301 |
+| TotalKg         |            0 |
+| Place           |            0 |
 ```
 
 ### 📄 Credits
