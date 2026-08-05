@@ -9,7 +9,7 @@
 ### 📌 Project Overview
 #
 
-### 📷 Examples
+### 📊 Analysis
 #
 
 ### 🎯 What I Learned
