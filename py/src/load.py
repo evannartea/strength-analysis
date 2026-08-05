@@ -1,6 +1,6 @@
 import time
 import pandas as pd
-from py.src.config import engine
+from config import engine
 
 start = time.time()
 df = pd.read_csv("data/raw/openpowerlifting-2026-08-01-55149139.csv")

@@ -1,5 +1,5 @@
 import pandas as pd
-from py.src.config import engine
+from config import engine
 
 def export_to_csv(table_name, engine):
     df = pd.read_sql(f"SELECT * FROM staging.{table_name}", engine)
