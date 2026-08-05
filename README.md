@@ -29,7 +29,7 @@ Male Lifters
 
 Female Lifters
 ```text
-       |      Age |   BodyweightKg |   Best3SquatKg |   Best3BenchKg |   Best3DeadliftKg |   TotalKg |
+|       |      Age |   BodyweightKg |   Best3SquatKg |   Best3BenchKg |   Best3DeadliftKg |   TotalKg |
 |-------|----------|----------------|----------------|----------------|-------------------|-----------|
 | count | 286226   |       286054   |       286172   |       286167   |          286174   |  286226   |
 | mean  |     31.8 |           70.7 |          116.4 |           65.4 |             139.5 |     321.2 |
