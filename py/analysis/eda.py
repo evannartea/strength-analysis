@@ -3,8 +3,14 @@ import pandas as pd
 
 df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
-summary = df.describe().round(1)
-print(tabulate(summary, headers="keys", tablefmt="github"))
+male_lifters = df[df["Sex"] == "M"]
+female_lifters = df[df["Sex"] == "F"]
+
+summary_m = male_lifters.describe().round(1)
+print(f"{tabulate(summary_m, headers='keys', tablefmt='github')}\n")
+
+summary_f = female_lifters.describe().round(1)
+print(f"{tabulate(summary_f, headers='keys', tablefmt='github')}\n")
 
 null_count = df.isnull().sum().reset_index()
 print(tabulate(null_count, headers=["Column", "Null Count"], tablefmt="github", showindex=False))
