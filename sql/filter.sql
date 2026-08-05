@@ -6,9 +6,9 @@ SELECT
 	"BodyweightKg",
 	"Country",
 	"Date"::date AS "Date",
-	"Best3SquatKg",
-	"Best3BenchKg",
-	"Best3DeadliftKg",
+	"Best3SquatKg" AS "SquatKg",
+	"Best3BenchKg" AS "BenchKg",
+	"Best3DeadliftKg" AS "DeadliftKg",
 	"TotalKg",
 	"Place"
 FROM raw.openpowerlifting_20260801
