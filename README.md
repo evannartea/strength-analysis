@@ -47,7 +47,7 @@ Female Lifters
 
 ### 📝 Notes
 #
-- The raw data was filtered to include only male or female adults, full SBD events, and raw equipment, while excluding any disqualified entries, no-shows, or guest lifters:
+- The raw data was filtered to include only male or female adults, full SBD events, and raw equipment, while excluding any guest lifters disqualified entries, or no-shows:
 ```sql
 WHERE "Age" >= 18
 AND "Sex" <> 'Mx'
