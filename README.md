@@ -8,6 +8,7 @@
 
 ### 📌 Project Overview
 #
+A data analysis project aimed to identify the key indicators for strength using powerlifting data.
 
 ### 📊 Results
 #
