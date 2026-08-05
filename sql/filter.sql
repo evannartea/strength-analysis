@@ -10,11 +10,11 @@ SELECT
 	"Best3BenchKg" AS "BenchKg",
 	"Best3DeadliftKg" AS "DeadliftKg",
 	"TotalKg",
-	"Place"
+	"Place"::int
 FROM raw.openpowerlifting_20260801
 WHERE "Age" >= 18
 AND "Sex" <> 'Mx'
 AND "Event"  = 'SBD'
 AND "Equipment" = 'Raw'
-AND "Place" NOT IN ('DQ', 'DD', 'NS')
+AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 ORDER BY "Date" DESC
