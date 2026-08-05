@@ -1,15 +1,9 @@
-import os
-import pandas as pd
 import time
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
-
-load_dotenv()
-database_url = os.getenv("DATABASE_URL")
-engine = create_engine(database_url)
+import pandas as pd
+from config import engine
 
 start = time.time()
-df = pd.read_csv("data/openpowerlifting-2026-08-01-55149139.csv")
+df = pd.read_csv("data/raw/openpowerlifting-2026-08-01-55149139.csv")
 df.to_sql(
     name="openpowerlifting_20260801",
     con=engine,
