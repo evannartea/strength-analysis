@@ -1,0 +1,5 @@
+# Top secret
+data/
+
+# Even more top secret
+.env
