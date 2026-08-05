@@ -17,7 +17,7 @@
 
 ### 📝 Notes
 #
-- The raw data was filtered to include only adults, full SBD events, raw equipment, while excluding any disqualified entries or no-shows:
+- The raw data was filtered to include only adults, full SBD events, and raw equipment, while excluding any disqualified entries or no-shows:
 ```sql
 WHERE "Age" >= 18
 AND "Event"  = 'SBD'
