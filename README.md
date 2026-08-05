@@ -30,12 +30,13 @@
 
 ### 📝 Notes
 #
-- The raw data was filtered to include only adults, full SBD events, and raw equipment, while excluding any disqualified entries or no-shows:
+- The raw data was filtered to include only male or female adults, full SBD events, and raw equipment, while excluding any disqualified entries or no-shows:
 ```sql
-WHERE "Age" >= 18
-AND "Event"  = 'SBD'
-AND "Equipment" = 'Raw'
-AND "Place" NOT IN ('DQ', 'DD', 'NS')
+WHERE op."Age" >= 18
+AND op."Sex" <> 'Mx'
+AND op."Event"  = 'SBD'
+AND op."Equipment" = 'Raw'
+AND op."Place" NOT IN ('DQ', 'DD', 'NS')
 ```
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables.
 ```text
