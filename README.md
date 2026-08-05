@@ -54,7 +54,7 @@ AND "Event"  = 'SBD'
 AND "Equipment" = 'Raw'
 AND "Place" NOT IN ('DQ', 'DD', 'NS')
 ```
-- There were several null values identified in the dataset, which may have impacted the analysis of some variables.
+- There were several null values identified in the dataset, which may have impacted the analysis of some variables:
 ```text
 | Column          |   Null Count |
 |-----------------|--------------|
