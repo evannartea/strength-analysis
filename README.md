@@ -26,7 +26,7 @@ AND "Place" NOT IN ('DQ', 'DD', 'NS')
 ```
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables.
 ```text
-Field              Count
+Column             Count
 ------------------------
 Name                   0
 Sex                    0
