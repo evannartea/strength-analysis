@@ -3,7 +3,10 @@ SELECT
 	"Name",
 	"Sex",
 	"Age",
-	"AgeClass",
+	CASE
+		WHEN "AgeClass" = '90-999' THEN '90+'
+		ELSE "AgeClass"
+	END AS "AgeClass",
 	"BodyweightKg",
 	"WeightClassKg",
 	"Country",
