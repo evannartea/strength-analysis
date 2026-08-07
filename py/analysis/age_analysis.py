@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
 # TotalKg by Age
-def age_total_scatter_plot(df):
+def totalkg_age_scatter_plot(df):
     plt.figure(figsize=(12, 6))
 
     # Set groups
@@ -40,7 +40,7 @@ def age_total_scatter_plot(df):
     #plt.show()
 
 # Avg TotalKg by AgeClass
-def ageclass_avgtotal_bar_chart(df):
+def avgtotalkg_ageclass_bar_chart(df):
     plt.figure(figsize=(12, 6))
 
     male_lifters = df[df["Sex"] == "M"]
@@ -80,5 +80,5 @@ def ageclass_avgtotal_bar_chart(df):
     plt.close()
     #plt.show()
 
-age_total_scatter_plot(df)
-ageclass_avgtotal_bar_chart(df)
+totalkg_age_scatter_plot(df)
+avgtotalkg_ageclass_bar_chart(df)
