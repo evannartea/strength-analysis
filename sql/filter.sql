@@ -3,7 +3,9 @@ SELECT
 	"Name",
 	"Sex",
 	"Age",
+	"AgeClass"
 	"BodyweightKg",
+	"WeightClassKg",
 	"Country",
 	"Date"::date AS "Date",
 	"Best3SquatKg" AS "SquatKg",
@@ -17,4 +19,4 @@ AND "Sex" <> 'Mx'
 AND "Event"  = 'SBD'
 AND "Equipment" = 'Raw'
 AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
-ORDER BY "Date" DESC
+ORDER BY "Date" DESC;
