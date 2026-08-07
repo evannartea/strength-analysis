@@ -6,6 +6,8 @@ df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
 # TotalKg by Age
 def age_total_scatter_plot(df):
+    plt.figure(figsize=(12, 6))
+
     # Set groups
     male_lifters = df[df["Sex"] == "M"]
     female_lifters = df[df["Sex"] == "F"]
