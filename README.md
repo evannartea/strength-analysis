@@ -57,19 +57,21 @@ AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 ```
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables:
 ```text
-| Column       |   Null Count |
-|--------------|--------------|
-| Name         |            0 |
-| Sex          |            0 |
-| Age          |            0 |
-| BodyweightKg |          458 |
-| Country      |        12403 |
-| Date         |            0 |
-| SquatKg      |          283 |
-| BenchKg      |          318 |
-| DeadliftKg   |          300 |
-| TotalKg      |            0 |
-| Place        |            0 |
+| Column        |   Null Count |
+|---------------|--------------|
+| Name          |            0 |
+| Sex           |            0 |
+| Age           |            0 |
+| AgeClass      |            0 |
+| BodyweightKg  |          458 |
+| WeightClassKg |         9387 |
+| Country       |        12403 |
+| Date          |            0 |
+| SquatKg       |          283 |
+| BenchKg       |          318 |
+| DeadliftKg    |          300 |
+| TotalKg       |            0 |
+| Place         |            0 |
 ```
 
 ### 📄 Credits
