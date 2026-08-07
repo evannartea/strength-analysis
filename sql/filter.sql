@@ -11,6 +11,7 @@ SELECT
 	"WeightClassKg",
 	"Country",
 	"Date"::date AS "Date",
+	extract(YEAR FROM "Date"::date) AS "Year",
 	"Best3SquatKg" AS "SquatKg",
 	"Best3BenchKg" AS "BenchKg",
 	"Best3DeadliftKg" AS "DeadliftKg",
