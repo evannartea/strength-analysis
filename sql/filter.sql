@@ -3,7 +3,7 @@ SELECT
 	"Name",
 	"Sex",
 	"Age",
-	"AgeClass"
+	"AgeClass",
 	"BodyweightKg",
 	"WeightClassKg",
 	"Country",
