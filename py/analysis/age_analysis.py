@@ -33,10 +33,14 @@ def age_total_scatter_plot(df):
     plt.legend(title="Sex")
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("figures/total_by_age.png", dpi=300, bbox_inches="tight")
+    plt.close()
+    #plt.show()
 
 # Avg TotalKg by AgeClass
-def ageclass_total_bar_chart(df):
+def ageclass_avgtotal_bar_chart(df):
+    plt.figure(figsize=(12, 6))
+
     male_lifters = df[df["Sex"] == "M"]
     female_lifters = df[df["Sex"] == "F"]
 
@@ -70,7 +74,9 @@ def ageclass_total_bar_chart(df):
     plt.legend(title="Sex")
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("figures/avgtotal_by_ageclass.png", dpi=300, bbox_inches="tight")
+    plt.close()
+    #plt.show()
 
 age_total_scatter_plot(df)
-ageclass_total_bar_chart(df)
+ageclass_avgtotal_bar_chart(df)
