@@ -15,13 +15,14 @@ def total_country_m_bar_chart(df):
         .head(20)
     )
 
+    plt.figure(figsize=(12,6))
+    
     # Bar chart
     plt.bar(
        avg_squat_m.index,
        avg_squat_m.values
     )
 
-    plt.figure(figsize=(12,6))
     plt.xlabel("Country")
     plt.ylabel("Average Total (kg)")
     plt.tight_layout()

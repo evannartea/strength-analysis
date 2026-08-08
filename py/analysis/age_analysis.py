@@ -10,6 +10,8 @@ def totalkg_age_scatter_plot(df):
     male_lifters = df[df["Sex"] == "M"]
     female_lifters = df[df["Sex"] == "F"]
 
+    plt.figure(figsize=(12, 6))
+
     # Scatter plot
     plt.scatter(
         x=male_lifters["Age"],
@@ -28,7 +30,6 @@ def totalkg_age_scatter_plot(df):
         s=20
     )
 
-    plt.figure(figsize=(12, 6))
     plt.xlabel("Age")
     plt.ylabel("Total (kg)")
     plt.legend(title="Sex")
@@ -52,6 +53,8 @@ def avgtotalkg_ageclass_bar_chart(df):
     x = np.arange(len(avg_total_m.index))
     width = 0.35
 
+    plt.figure(figsize=(12, 6))
+    
     # Bar chart
     plt.bar(
         x - width/2,
@@ -68,7 +71,6 @@ def avgtotalkg_ageclass_bar_chart(df):
         color="lightcoral"
     )
 
-    plt.figure(figsize=(12, 6))
     plt.xticks(x, avg_total_m.index)
     plt.xlabel("Age Class")
     plt.ylabel("Average Total (kg)")

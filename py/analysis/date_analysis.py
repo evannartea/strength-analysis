@@ -14,6 +14,8 @@ def unfilitered_sbd_year_m_line_chart(df):
     male_lifters = df[df["Sex"] == "M"]
     yearly_avg = male_lifters.groupby("Year")[["SquatKg", "BenchKg", "DeadliftKg"]].mean()
 
+    plt.figure(figsize=(12,6))
+
     plt.plot(
         yearly_avg.index,
         yearly_avg["SquatKg"],
@@ -33,7 +35,6 @@ def unfilitered_sbd_year_m_line_chart(df):
         color="#cba5ff"
     )
 
-    plt.figure(figsize=(12,6))
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
@@ -48,6 +49,8 @@ def unfilitered_sbd_year_f_line_chart(df):
     female_lifters = df[df["Sex"] == "F"]
     yearly_avg = female_lifters.groupby("Year")[["SquatKg", "BenchKg", "DeadliftKg"]].mean()
 
+    plt.figure(figsize=(12,6))
+
     plt.plot(
         yearly_avg.index,
         yearly_avg["SquatKg"],
@@ -67,7 +70,6 @@ def unfilitered_sbd_year_f_line_chart(df):
         color="#cba5ff"
     )
 
-    plt.figure(figsize=(12,6))
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
@@ -86,6 +88,8 @@ def filtered_sbd_year_m_line_chart(df):
     male_lifters = df[(df["Sex"] == "M") & (df["Year"] >= 1998)]
     yearly_avg = male_lifters.groupby("Year")[["SquatKg", "BenchKg", "DeadliftKg"]].mean()
 
+    plt.figure(figsize=(12,6))
+
     plt.plot(
         yearly_avg.index,
         yearly_avg["SquatKg"],
@@ -105,7 +109,6 @@ def filtered_sbd_year_m_line_chart(df):
         color="#cba5ff"
     )
 
-    plt.figure(figsize=(12,6))
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
@@ -120,6 +123,8 @@ def filtered_sbd_year_f_line_chart(df):
     female_lifters = df[(df["Sex"] == "F") & (df["Year"] >= 2008)]
     yearly_avg = female_lifters.groupby("Year")[["SquatKg", "BenchKg", "DeadliftKg"]].mean()
 
+    plt.figure(figsize=(12,6))
+    
     plt.plot(
         yearly_avg.index,
         yearly_avg["SquatKg"],
@@ -139,7 +144,6 @@ def filtered_sbd_year_f_line_chart(df):
         color="#cba5ff"
     )
 
-    plt.figure(figsize=(12,6))
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
