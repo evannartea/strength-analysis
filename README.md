@@ -64,9 +64,6 @@ Female Lifters
 
 <img src="figures/total_by_country_f.png">
 
-### 🎯 What I Learned
-#
-
 ### 📝 Notes
 #
 - The raw data was filtered to include only adult male and female lifters competing in full SBD events using raw equipment. Guest lifters, disqualified entries, and no-shows were excluded:
@@ -77,6 +74,7 @@ AND "Event"  = 'SBD'
 AND "Equipment" = 'Raw'
 AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 ```
+
 - There were several null values identified in the dataset, which may have impacted the analysis of some variables:
 ```text
 | Column        |   Null Count |
@@ -95,10 +93,12 @@ AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 | TotalKg       |            0 |
 | Place         |            0 |
 ```
+
 - The data was further filtered when analysing performance over time. Powerlifting events prior to 1998 were excluded for males, as there were fewer than 100 entries for each year, with most events having fewer than 10 entries before 1994. For females, there were fewer than 100 entries per year before 2008, with no entries recorded before 1996. This resulted in inconsistent spikes in the line graphs:
 <img src="figures/unfiltered_sbd_m_by_year.png">
 <img src="figures/unfiltered_sbd_f_by_year.png">
 
+- The data was also further filtered when analysing performance by country. Only countries with more than 1,000 entries were included to reduce the potential for skewed results. The analysis was also limited to the 24–34 and 35–39 age classes to focus on the groups in which competitors were likely at their strongest.
 
 ### 📄 Credits
 #
