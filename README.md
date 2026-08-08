@@ -55,6 +55,15 @@ Female Lifters
 <img src="figures/total_by_age.png">
 <img src="figures/avgtotal_by_ageclass.png">
 
+#### Performance by Country
+Male Lifters
+
+<img src="figures/total_by_country_m.png">
+
+Female Lifters
+
+<img src="figures/total_by_country_f.png">
+
 ### 🎯 What I Learned
 #
 
