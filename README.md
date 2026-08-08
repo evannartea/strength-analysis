@@ -46,6 +46,15 @@ Female Lifters
 <img src="figures/total_by_age.png">
 <img src="figures/avgtotal_by_ageclass.png">
 
+#### Performance over time
+Male Lifters
+
+<img src="figures/filtered_sbd_m_by_year.png">
+
+Female Lifters
+
+<img src="figures/filtered_sbd_f_by_year.png">
+
 ### 🎯 What I Learned
 #
 
