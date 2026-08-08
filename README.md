@@ -77,8 +77,9 @@ AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 | TotalKg       |            0 |
 | Place         |            0 |
 ```
-- The data was further filtered when analysing performance over time. Powerlifting events prior to 1998 were excluded, as there were fewer than 100 entries for each year, with most events having fewer than 10 entries before 1994. This resulted in inconsistent spikes in the line charts:
-<img src="figures/unfiltered_sbd_by_year.png">
+- The data was further filtered when analysing performance over time. Powerlifting events prior to 1998 were excluded for males, as there were fewer than 100 entries for each year, with most events having fewer than 10 entries before 1994. For females, there were fewer than 100 entries per year before 2008, with no entries recorded before 1996. This resulted in inconsistent spikes in the line graphs:
+<img src="figures/unfiltered_sbd_m_by_year.png">
+<img src="figures/unfiltered_sbd_f_by_year.png">
 
 
 ### 📄 Credits
