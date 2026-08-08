@@ -6,7 +6,7 @@ from matplotlib.ticker import MultipleLocator
 df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
 # ====================
-#       Unfiltered
+#      Unfiltered
 # ====================
 
 # SBD by Year
