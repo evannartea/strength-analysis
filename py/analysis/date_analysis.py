@@ -38,8 +38,8 @@ def unfilitered_sbd_year_m_line_chart(df):
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
-
     plt.tight_layout()
+
     plt.savefig("figures/unfiltered_sbd_m_by_year.png", dpi=300, bbox_inches="tight")
     print("Figure saved successfully!")
     plt.close()
@@ -73,8 +73,8 @@ def unfilitered_sbd_year_f_line_chart(df):
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
-
     plt.tight_layout()
+
     plt.savefig("figures/unfiltered_sbd_f_by_year.png", dpi=300, bbox_inches="tight")
     print("Figure saved successfully!")
     plt.close()
@@ -112,8 +112,8 @@ def filtered_sbd_year_m_line_chart(df):
     plt.xlabel("Year")
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
-
     plt.tight_layout()
+
     plt.savefig("figures/filtered_sbd_m_by_year.png", dpi=300, bbox_inches="tight")
     print("Figure saved successfully!")
     plt.close()
@@ -148,8 +148,8 @@ def filtered_sbd_year_f_line_chart(df):
     plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
     plt.gca().xaxis.set_major_locator(MultipleLocator(5))
-
     plt.tight_layout()
+
     plt.savefig("figures/filtered_sbd_f_by_year.png", dpi=300, bbox_inches="tight")
     print("Figure saved successfully!")
     plt.close()
