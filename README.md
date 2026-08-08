@@ -77,6 +77,9 @@ AND "Place" NOT IN ('G', 'DQ', 'DD', 'NS')
 | TotalKg       |            0 |
 | Place         |            0 |
 ```
+- The data was further filtered when analysing performance over time. Entries prior to 1998 were excluded, as there were fewer than 100 entries for each year, resulting in inconsistent spikes in the line charts:
+<img src="figures/unfiltered_sbd_by_year.png">
+
 
 ### 📄 Credits
 #
