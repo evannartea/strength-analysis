@@ -4,52 +4,31 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
-# Squat by Country
-def squat_country_bar_chart():
-    plt.figure(figsize=(12,6))
-    
+# Total by Country
+def total_country_m_bar_chart(df):
     male_lifters = df[df["Sex"] == "M"]
-    female_lifters = df[df["Sex"] == "F"]
-
-    avg_squat_m = male_lifters.groupby("Country")["SquatKg"].mean()
-    avg_squat_f = female_lifters.groupby("Country")["SquatKg"].mean()
-
-    x = np.arange(len(avg_squat_m.index))
-    width = 0.35
+    avg_squat_m = (
+        male_lifters
+        .groupby("Country")["TotalKg"]
+        .mean()
+        .sort_values(ascending=False)
+        .head(20)
+    )
 
     # Bar chart
     plt.bar(
-        x - width/2,
-        avg_squat_m.values,
-        width,
-        label="Male",
-        color="skyblue"
-    )
-    plt.bar(
-        x + width/2,
-        avg_squat_f.values,
-        width,
-        label="Female",
-        color="lightcoral"
+       avg_squat_m.index,
+       avg_squat_m.values
     )
 
-    plt.xticks(x, avg_squat_m.index)
+    plt.figure(figsize=(12,6))
     plt.xlabel("Country")
-    plt.ylabel("Average Weight (kg)")
-    plt.legend(title="Sex")
-
+    plt.ylabel("Average Total (kg)")
     plt.tight_layout()
+
     #plt.savefig("figures/squat_by_country.png", dpi=300, bbox_inches="tight")
     #print("Figure saved successfully!")
-    plt.close()
-    #plt.show()
+    #plt.close()
+    plt.show()
 
-    
-# Bench by Country:
-def bench_country_bar_chart():
-    ...
-
-def deadlift_country_bar_chart():
-    ...
-
-squat_country_bar_chart(df)
+total_country_m_bar_chart(df)
