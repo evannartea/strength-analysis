@@ -42,10 +42,6 @@ Female Lifters
 | max   |     92   |          216   |     318.5 |     188.2 |        297.5 |     759   |
 ```
 
-#### Performance by Age
-<img src="figures/total_by_age.png">
-<img src="figures/avgtotal_by_ageclass.png">
-
 #### Performance over time
 Male Lifters
 
@@ -54,6 +50,10 @@ Male Lifters
 Female Lifters
 
 <img src="figures/filtered_sbd_f_by_year.png">
+
+#### Performance by Age
+<img src="figures/total_by_age.png">
+<img src="figures/avgtotal_by_ageclass.png">
 
 ### 🎯 What I Learned
 #
