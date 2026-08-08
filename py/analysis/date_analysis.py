@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 
 df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 
@@ -40,8 +41,9 @@ def unfilitered_sbd_year_m_line_chart(df):
 
     plt.tight_layout()
     plt.savefig("figures/unfiltered_sbd_m_by_year.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
     plt.close()
-    plt.show()
+    #plt.show()
 
 def unfilitered_sbd_year_f_line_chart(df):
     plt.figure(figsize=(12,6))
@@ -74,6 +76,7 @@ def unfilitered_sbd_year_f_line_chart(df):
 
     plt.tight_layout()
     plt.savefig("figures/unfiltered_sbd_f_by_year.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
     plt.close()
     #plt.show()
 
@@ -111,9 +114,10 @@ def filtered_sbd_year_m_line_chart(df):
     plt.legend(title="Lift")
 
     plt.tight_layout()
-    #plt.savefig("figures/unfiltered_sbd_by_year.png", dpi=300, bbox_inches="tight")
-    #plt.close()
-    plt.show()
+    plt.savefig("figures/filtered_sbd_m_by_year.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
+    plt.close()
+    #plt.show()
 
 def filtered_sbd_year_f_line_chart(df):
     plt.figure(figsize=(12,6))
@@ -143,11 +147,13 @@ def filtered_sbd_year_f_line_chart(df):
     plt.xlabel("Year")
     plt.ylabel("Weight (kg)")
     plt.legend(title="Lift")
+    plt.gca().xaxis.set_major_locator(MultipleLocator(5))
 
     plt.tight_layout()
-    #plt.savefig("figures/unfiltered_sbd_by_year.png", dpi=300, bbox_inches="tight")
-    #plt.close()
-    plt.show()
+    plt.savefig("figures/filtered_sbd_f_by_year.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
+    plt.close()
+    #plt.show()
 
 #unfilitered_sbd_year_m_line_chart(df)
 #unfilitered_sbd_year_f_line_chart(df)

@@ -36,6 +36,7 @@ def totalkg_age_scatter_plot(df):
 
     plt.tight_layout()
     plt.savefig("figures/total_by_age.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
     plt.close()
     #plt.show()
 
@@ -77,6 +78,7 @@ def avgtotalkg_ageclass_bar_chart(df):
 
     plt.tight_layout()
     plt.savefig("figures/avgtotal_by_ageclass.png", dpi=300, bbox_inches="tight")
+    print("Figure saved successfully!")
     plt.close()
     #plt.show()
 
