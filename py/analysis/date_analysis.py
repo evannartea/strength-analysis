@@ -36,7 +36,7 @@ def unfilitered_sbd_year_m_line_chart(df):
     )
 
     plt.xlabel("Year")
-    plt.ylabel("Weight (kg)")
+    plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
 
     plt.tight_layout()
@@ -71,7 +71,7 @@ def unfilitered_sbd_year_f_line_chart(df):
     )
 
     plt.xlabel("Year")
-    plt.ylabel("Weight (kg)")
+    plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
 
     plt.tight_layout()
@@ -110,7 +110,7 @@ def filtered_sbd_year_m_line_chart(df):
     )
 
     plt.xlabel("Year")
-    plt.ylabel("Weight (kg)")
+    plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
 
     plt.tight_layout()
@@ -145,7 +145,7 @@ def filtered_sbd_year_f_line_chart(df):
     )
 
     plt.xlabel("Year")
-    plt.ylabel("Weight (kg)")
+    plt.ylabel("Average Weight (kg)")
     plt.legend(title="Lift")
     plt.gca().xaxis.set_major_locator(MultipleLocator(5))
 
@@ -155,8 +155,8 @@ def filtered_sbd_year_f_line_chart(df):
     plt.close()
     #plt.show()
 
-#unfilitered_sbd_year_m_line_chart(df)
-#unfilitered_sbd_year_f_line_chart(df)
+unfilitered_sbd_year_m_line_chart(df)
+unfilitered_sbd_year_f_line_chart(df)
 
 filtered_sbd_year_m_line_chart(df)
 filtered_sbd_year_f_line_chart(df)
