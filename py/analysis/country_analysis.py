@@ -7,8 +7,12 @@ df = pd.read_csv("data/clean/openpowerlifting_20260801.csv")
 # Total by Country
 def total_country_m_bar_chart(df):
     df_filtered = df[(df["Sex"] == "M") & (df["AgeClass"].isin(["24-34", "35-39"]))]
+
+    country_counts = df_filtered["Country"].value_counts()
+    valid_countries = country_counts[country_counts > 1000].index
+
     male_lifters = df_filtered[
-        df_filtered.groupby("Country")["Country"].transform("size") > 1000
+    df_filtered["Country"].isin(valid_countries)
     ]
 
     avg_total_m = (
@@ -47,8 +51,12 @@ def total_country_m_bar_chart(df):
 
 def total_country_f_bar_chart(df):
     df_filtered = df[(df["Sex"] == "F") & (df["AgeClass"].isin(["24-34", "35-39"]))]
+    
+    country_counts = df_filtered["Country"].value_counts()
+    valid_countries = country_counts[country_counts > 1000].index
+
     female_lifters = df_filtered[
-        df_filtered.groupby("Country")["Country"].transform("size") > 1000
+    df_filtered["Country"].isin(valid_countries)
     ]
 
     avg_total_f = (
